@@ -9,17 +9,19 @@
     <td>Last Name:</td>
     <td><%= @patient.last_name %></td>
 </tr>
+<% @appointments.each_with_index do |appointment, index| %>
+<tr>
+    <td>Doctor's Name: </td>
+    <td><%= appointment.doctor.full_name %></td>
+</tr>
+<%end%>
 <tr>
     <td>Remove Patient:</td>
     <td><%= button_to 'Delete', {:controller => :patients, :action => 'destroy', :id => @patient }, :method => :delete, class:"btn" %></td>
 </tr>
 </table>
 
-<% @appointments.each_with_index do |appointment, index| %>
-<p>Doctor's Name: </p>
-  <%= appointment.doctor.full_name %>
 
   <%# In appointment index - do @appointments.each_with_index do |appt, i|  %>
   <%# appt.user_id.user.full_name %>
  
-<%end%>
