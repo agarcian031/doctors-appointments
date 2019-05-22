@@ -4,13 +4,13 @@ class AppointmentsController < ApplicationController
 
 
   def index
-    # @user = current_user.full_name 
-    @appointments = @doctors.appointments 
+    # @patient = current_user.full_name 
+    @appointments = @doctor.appointments 
   end
 
   def show
-    @patient = @appointment.patient.find([:id])
-    @doctor = @appointment.doctor.find([:doctor_id])
+    # @patient = @appointment.patients.find([:id])
+    # @doctor = @appointment.doctors.find([:doctor_id])
   end
 
   def new
@@ -54,6 +54,6 @@ class AppointmentsController < ApplicationController
   end 
 
   def set_appointment
-    @appointment = @doctor.appointment.find(params[:id])
+    @appointment = @doctor.appointments.find(params[:id])
   end 
 end

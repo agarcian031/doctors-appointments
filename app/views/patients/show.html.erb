@@ -1,2 +1,16 @@
-<h1>Patients#show</h1>
-<p>Find me in app/views/patients/show.html.erb</p>
+<h1>Patient Chart</h1>
+<h3>Your information: </h3>
+<table class="stripped">
+<tr>
+    <td>First Name:</td>
+    <td><%= @patient.first_name %></td>
+</tr>
+<tr>
+    <td>Last Name:</td>
+    <td><%= @patient.last_name %></td>
+</tr>
+<tr>
+    <td>Remove Patient:</td>
+    <td><%= button_to 'Delete', {:controller => :patients, :action => 'destroy', :id => @patient }, :method => :delete, class:"btn" %></td>
+</tr>
+</table>
