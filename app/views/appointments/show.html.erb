@@ -1,2 +1,14 @@
-<h1>Appointments#show</h1>
-<p>Find me in app/views/appointments/show.html.erb</p>
+<h1>Appointments</h1>
+<%= link_to 'Add Appointment', new_doctor_appointment_path(@doctor), class: "btn" %>
+<hr>
+<ul>
+  <% @doctor.appointments.each do |appointment| %>
+    <li>
+      <%= appointment.patient_id %>
+      <%= appointment.appointment_date%> at 
+      <%= appointment.appointment_time%>
+    </li>
+  <% end %>
+</ul>
+
+<%# TO DO == GET PATIENT NAME USING THE ID %>

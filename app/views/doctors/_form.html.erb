@@ -1,0 +1,13 @@
+<%= form_with(model: @doctor, local: true) do |f| %>
+<div class="field">
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, autofocus: true, required: true, placeholder: "First Name" %>
+</div>
+<div class="field">
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, required: true, placeholder: "Last Name" %>
+</div>
+<div class="action">
+  <%= f.submit nil, class: "btn" %>
+</div>
+<%end%>

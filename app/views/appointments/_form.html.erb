@@ -1,0 +1,17 @@
+<%= form_with(model: @appointments, local: true) do |f| %>
+<div class="field">
+  <%= f.label :appointment_date %>
+  <%= f.text_field :appointment_date, autofocus: true, required: true, placeholder: "Appointment Date" %>
+</div>
+<div class="field">
+  <%= f.label :appointment_time %>
+  <%= f.text_field :appointment_time, required: true, placeholder: "Appointment Time" %>
+</div>
+<div class="field">
+  <%= f.label :patient_id %>
+  <%= f.text_field :patient_id, required: true, placeholder: "Patient ID" %>
+</div>
+<div class="action">
+  <%= f.submit nil, class: "btn" %>
+</div>
+<%end%>

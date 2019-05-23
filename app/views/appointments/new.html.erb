@@ -1,2 +1,4 @@
-<h1>Appointments#new</h1>
-<p>Find me in app/views/appointments/new.html.erb</p>
+<h1>New Appointment</h1>
+<p>Please fill your information below:</p>
+<%= render "form"%>
+<%= link_to 'Cancel', doctor_appointments_path(@doctor) %>
